@@ -1,4 +1,4 @@
-package com.haubui.lesson01_sett;
+package com.haubui.lesson01_setup_environment;
 
 /**
  * Hello world!
