@@ -1,7 +1,7 @@
 package com.haubui.view;
 
 public class Ex02 {
-	public static long factorial(int number) {
+	private static long factorial(int number) {
 		if (number <= 2) {
 			return number;
 		}

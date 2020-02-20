@@ -5,11 +5,13 @@ public class Ex06 {
 		System.out.println(get200thPrimeNumber());
 	}
 
-	public static boolean isPrime(int number) {
-		if (number <= 1)
-			return false;
+	private static boolean isPrime(int number) {
 
-		for (int i = 2; i < number; i++)
+		if (number <= 1) {
+			return false;
+		}
+
+		for (int i = 2; i < Math.sqrt(number); i++)
 			if (number % i == 0) {
 				return false;
 			}
@@ -17,15 +19,15 @@ public class Ex06 {
 		return true;
 	}
 
-	public static int get200thPrimeNumber() {
-		int result = 2;
-		int count = 1;
-		while (count <= 200) {
+	private static int get200thPrimeNumber() {
+		int result = 1;
+		int count = 0;
+		while (count < 200) {
+			result++;
 			if (isPrime(result)) {
 				count++;
 			}
-			result++;
 		}
-		return result - 1;
+		return result;
 	}
 }
